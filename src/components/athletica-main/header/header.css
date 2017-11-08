@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  background: #FFF;
+  height: auto;
+  border-bottom: 1px solid #f0f0f0
+}
+
+.banner {
+  padding: 6px 0;
+  background: #24c7d1;
+  position: relative
+}

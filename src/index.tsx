@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Router from 'containers/router';
 
-import Home from 'containers/home-business-classic';
+import Home from 'containers/athletica-main';
 import Signup from 'containers/page-signup';
 import Business from 'containers/business';
 import HomeShopSlider from 'containers/home-shop-slider';
