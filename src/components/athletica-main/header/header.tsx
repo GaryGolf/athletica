@@ -9,7 +9,7 @@ export default class Header extends React.PureComponent <Props, State> {
   render() {
     return (
       <header className={styles.header}>
-        <h1>Hello</h1>
+        <Banner/>
       </header>
     );
   }
