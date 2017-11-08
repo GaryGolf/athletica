@@ -39,7 +39,7 @@
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.5.1.tgz#a38f69c62528d56ba7bd1f91335a8004988d72f7"
 
-"@types/react-dom@^16.0.1":
+"@types/react-dom@^16.0.2":
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.2.tgz#2da9de21fd83f0140b64794ad9c47930230aedae"
   dependencies:
@@ -53,9 +53,9 @@
     "@types/react" "*"
     redux "^3.6.0"
 
-"@types/react@*", "@types/react@^15.0.34":
-  version "15.6.6"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.6.tgz#21c93d921d63e5c8478ad54b917f52c9abd547e2"
+"@types/react@*", "@types/react@^16.0.21":
+  version "16.0.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.21.tgz#1f4313594f784a477521a0795c46e7b832051ef3"
 
 "@types/redux-logger@^3.0.0":
   version "3.0.5"
