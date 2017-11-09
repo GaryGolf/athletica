@@ -1,0 +1,38 @@
+.list {
+  margin: 120px auto;
+  width: 90%;
+  max-width: 1020px;
+}
+
+.features {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.features>li {
+  list-style: none;
+  display: inline-block;
+  width: 31%;
+  margin: 0 1%;
+  position: relative;
+  vertical-align: top;
+}
+.features>li>a {
+
+  display: block;
+  font-weight: 500;
+  color: #29292b;
+  font-size: 1rem;
+}
+
+.image {
+  width: 90%;
+  margin: 0 auto 35px auto;
+  position: relative;
+  color: transparent;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: opacity 0.25s ease-in-out;
+}
+
