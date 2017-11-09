@@ -1,3 +1,3 @@
-import Header from './header';
+import UtilityBar from './utility-bar';
 
-export default Header;
+export default UtilityBar;

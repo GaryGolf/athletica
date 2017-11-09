@@ -5,6 +5,7 @@ import UtilityBar from './utility-bar';
 interface Props {
   transparent?: boolean;
   noUtilityBar?: boolean; 
+  utilityBar?: JSX.Element;
 }
 
 interface State {
@@ -13,11 +14,14 @@ interface State {
 
 export default class NavMenu extends React.Component <Props, State> {
 
+  private utilityBar: JSX.Element;
+
   constructor(props:Props) {
     super(props);
     this.state = { 
       open:false,
     };
+    this.utilityBar = props.utilityBar || <UtilityBar/>;
   }
 
   handleNavOpenToggle = (event) => {
@@ -33,7 +37,7 @@ export default class NavMenu extends React.Component <Props, State> {
       : 'transition--fade transition--active nav-open';
     return (
       <nav className={navStyle} >
-        { noUtilityBar ? null : <UtilityBar /> }
+        { noUtilityBar ? null : this.utilityBar }
         <NavBar transparent={transparent} />
         <div className="nav-mobile-toggle visible-sm visible-xs"
           onClick={this.handleNavOpenToggle}>

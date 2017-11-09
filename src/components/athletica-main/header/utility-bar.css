@@ -1,0 +1,70 @@
+.content {
+  position: relative;
+  width: auto;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: .75rem;
+  color: #232323;
+}
+.text {
+  padding-left: 0;
+}
+.right {
+  float: none;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+
+.origin {
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+  width: 180px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.canada {
+  display: none;
+}
+
+.origin:hover .usa {
+  display: none;
+}
+
+.origin:hover .canada {
+  display: block;
+}
+
+.usa:before {
+  content: '*****';
+  margin-right: 5px;
+  color: transparent;
+  background-image: url("http://cdn.shopify.com/s/files/1/0660/0355/t/8/assets/flag-usa.png");
+  background-repeat: no-repeat;
+}
+
+.canada:before {
+  content: '*****';
+  margin-right: 5px;
+  color: transparent;
+  background-image: url("http://cdn.shopify.com/s/files/1/0660/0355/t/8/assets/flag-canada.png");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+  .right {
+    display: none;
+  }
+  .origin {
+    display: none;
+  }
+}
