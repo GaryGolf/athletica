@@ -3,58 +3,52 @@ import * as styles from './blocks.css';
 
 interface Props { }
 
-export default () => {
+export default (props: Props) => {
+  styles.image0 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+  styles.image1 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+  styles.image2 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+  styles.image3 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+
   return (
-    <div className="blocks-wrapper blocks-count-4">
-      <ul className={styles.blocks}>
-        <li>
-          <div className={styles.image1} />
-          <div className={styles.clearfix}></div>
-          <div className={styles.content}>
-            <div className={styles.title}>Build a Set</div>
-            <p> Not sure where to get started? Build a bundle of Knix favorites and save. </p>
-            <a href="https://www.knixwear.com/pages/build-a-set" className={styles.button}>
-              build a set
-            </a>
-          </div>
-        </li>
-        <li>
-          <div className={styles.image2} />
-          <div className={styles.clearfix}></div>
-          <div className={styles.content}>
-            <div className={styles.title}>30 day wash &amp; wear guarantee</div>
-            <p> 
-              Take your bra from yoga to the office or even on a weekend adventure! 
-              If the fit still isn't right, we'll get you in the right size. 
-            </p>
-            <a href="https://www.knixwear.com/collections/bras" className={styles.button}>
-              shop bras
-            </a>
-          </div>
-        </li>
-        <li>
-          <div className={styles.image3} />
-          <div className={styles.clearfix}></div>
-          <div className={styles.content}>
-            <div className={styles.title}>Find your size</div>
-            <p> View our bra and underwear size charts to find your perfect fit. </p>
-            <a href="https://www.knixwear.com/pages/bra-size-chart" className={styles.button}>
-              Find My Size
-            </a>
-          </div>
-        </li>
-        <li>
-          <div className={styles.image2} />
-          <div className={styles.clearfix}></div>
-          <div className={styles.content}>
-            <div className={styles.title}>Our Innovations</div>
-            <p> See what happens when performance meets design </p>
-            <a href="https://www.knixwear.com/pages/technology" className={styles.button}>
-              Discover
-            </a>
-          </div>
-        </li>
-      </ul>
+  <section className="bg-white" >
+    <div className="row justify-content-center align-items-center">
+      <div className={styles.image0}/>
+      <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
+        <h4 className="text-uppercase">Build a set</h4>
+        <p>
+          Not sure where to get started? <br/>Build a bundle of Knix favorites and save.
+        </p>
+        <a href="#" className="btn btn-white"> Build a set</a>
+      </div>
+      <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
+        <h4 className="text-uppercase">30 day wash & wear guarantee</h4>
+        <p>
+          Take your bra from yoga to the <br/>
+          office or even on a weekend <br/>
+          adventure! If the fit still isn't right, <br/>
+          we'll get you in the right size.
+        </p>
+        <a href="#" className="btn btn-white">Shop Bras</a>
+      </div>
+      <div className={styles.image1}/>
+      <div className={styles.image2}/>
+      <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
+        <h4 className="text-uppercase">Find Your Size</h4>
+        <p>
+          View our bra and underwear size <br/>charts to find your perfect fit.
+        </p>
+        <a href="#" className="btn btn-white">Find Your Size</a>
+      </div>
+      <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
+        <h4 className="text-uppercase">Our Innovations</h4>
+        <p>
+          See what happens when <br/>
+          performance meets design
+        </p>
+        <a href="#" className="btn btn-white">Discover</a>
+      </div>
+      <div className={styles.image3}/>
     </div>
+  </section>
   );
-};
+}
