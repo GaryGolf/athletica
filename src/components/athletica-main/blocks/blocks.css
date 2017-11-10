@@ -1,0 +1,23 @@
+.blocks {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+  max-width: 1600px;
+}
+
+.blocks > li {
+  margin-top: -5px;
+  list-style: none;
+  position: relative;
+  background: #FFF;
+}
+
+.image {
+  float: left;
+  width: 50%;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
