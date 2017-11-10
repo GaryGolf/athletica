@@ -45,19 +45,13 @@
 }
 
 .usa:before {
-  content: '*****';
+  content: url("/img/flag-usa.png");
   margin-right: 5px;
-  color: transparent;
-  background-image: url("/img/flag-usa.png");
-  background-repeat: no-repeat;
 }
 
 .canada:before {
-  content: '*****';
+  content: url("/img/flag-canada.png");
   margin-right: 5px;
-  color: transparent;
-  background-image: url("/img/flag-canada.png");
-  background-repeat: no-repeat;
 }
 
 @media (max-width: 991px) {
