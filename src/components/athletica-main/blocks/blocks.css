@@ -1,131 +1,34 @@
-.container {
-  margin: 0 auto;
-  width: 100%;
-}
 
-.blocks {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1600px;
-  width: auto;
-}
-
-.blocks > li {
-  margin-top: -5px;
-  list-style: none;
-  position: relative;
-  background: #FFF;
-}
-
-
-.content {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #FFF;
-  width: 50%;
-}
-
-/* .block >  */
-li:nth-child(even) .content {
-  color: #29292b;
-  right: 50%;
-  left: 0;
-}
-
-.content .title {
-  font-weight: 600;
-  font-size: 27px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 1.3;
-  color: #29292b;
-}
-
-.content p {
-  font-weight: 500;
-  max-width: 290px;
-  font-size: 18px;
-  font-weight: 400;
-  color: #FFF;
-  text-shadow: 0 0 0 #fff;
-  margin-left: auto;
-  margin-right: auto;
-  color: #29292b;
-  margin-bottom: 0;
-}
-
-.button {
-  width: auto;
-  margin: 0;
-  line-height: 1.42;
-  font-weight: bold;
-  text-decoration: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  text-transform: uppercase;
-  padding: 10px 20px;
-  display: inline-block;
-  text-align: center;
-  background-color: transparent;
-  border-radius: 0;
-  transition: all 0.25s ease-in-out;
-
-  margin-top: 40px;
-  font-weight: 600;
-  min-width: 120px;
-  letter-spacing: 0.6px;
-  border: 2px solid #29292b;
-  background: transparent;
-  color: #29292b;
-}
-
-.clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.image0, .image1, image2, image3 {
+.image {
   background-color: #FFF;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.image0::after, .image1::after, .image2::after, .image3::after  {
+.image::after  {
   content: "";
   display: block;
   padding: 30%;
 }
 
 .image0 {
-  /* float: left; */
+  composes: image;
   background-image: url("/img/home_blocks_0_xs.jpeg");
 }
 
 .image1 {
-  /* float: right; */
+  composes: image;
   background-image: url("/img/home_blocks_1_xs.jpeg");
 }
 
 .image2 {
-  /* float: left; */
+  composes: image;
   background-image: url("/img/home_blocks_2_xs.jpeg");
 }
 
 .image3 {
-  /* float: right; */
+  composes: image;
   background-image: url("/img/home_blocks_3_xs.jpeg");
 }
 
@@ -155,10 +58,4 @@ li:nth-child(even) .content {
   .image1 {background-image: url("/img/home_blocks_1_lg.jpeg");}
   .image2 {background-image: url("/img/home_blocks_2_lg.jpeg");}
   .image3 {background-image: url("/img/home_blocks_3_lg.jpeg");}
-
-  .button {
-    padding: 10px 15px;
-    font-size: 18px;
-    min-width: 0;
-  }
 }

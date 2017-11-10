@@ -4,15 +4,14 @@ import * as styles from './blocks.css';
 interface Props { }
 
 export default (props: Props) => {
-  styles.image0 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
-  styles.image1 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
-  styles.image2 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
-  styles.image3 += ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+  const n = ' imageblock__content col-lg-5 col-sm-10 col-xs-12';
+  const b = n + ' d-none d-lg-block';
+  const s = n + ' d-block d-lg-none';
 
   return (
-  <section className="bg-white" >
+  <section className="bg-whit">
     <div className="row justify-content-center align-items-center">
-      <div className={styles.image0}/>
+      <div className={styles.image0 + n}/>
       <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
         <h4 className="text-uppercase">Build a set</h4>
         <p>
@@ -20,6 +19,7 @@ export default (props: Props) => {
         </p>
         <a href="#" className="btn btn-white"> Build a set</a>
       </div>
+      <div className={styles.image1 + s}/>
       <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
         <h4 className="text-uppercase">30 day wash & wear guarantee</h4>
         <p>
@@ -30,8 +30,8 @@ export default (props: Props) => {
         </p>
         <a href="#" className="btn btn-white">Shop Bras</a>
       </div>
-      <div className={styles.image1}/>
-      <div className={styles.image2}/>
+      <div className={styles.image1 + b}/>
+      <div className={styles.image2 + n}/>
       <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
         <h4 className="text-uppercase">Find Your Size</h4>
         <p>
@@ -39,6 +39,7 @@ export default (props: Props) => {
         </p>
         <a href="#" className="btn btn-white">Find Your Size</a>
       </div>
+      <div className={styles.image3 + s}/>
       <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
         <h4 className="text-uppercase">Our Innovations</h4>
         <p>
@@ -47,7 +48,7 @@ export default (props: Props) => {
         </p>
         <a href="#" className="btn btn-white">Discover</a>
       </div>
-      <div className={styles.image3}/>
+      <div className={styles.image3 + b}/>
     </div>
   </section>
   );
