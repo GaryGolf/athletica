@@ -9,7 +9,7 @@ export default (props: Props) => {
   const s = n + ' d-block d-lg-none';
 
   return (
-  <section className="bg-whit">
+  <section className="bg-white">
     <div className="row justify-content-center align-items-center">
       <div className={styles.image0 + n}/>
       <div className="col-lg-5 col-md-8 col-sm-10 col-xs-12 text-center py-5">
