@@ -32,6 +32,8 @@ export default class SocialList extends React.Component <Props, State> {
       case 'InstagramURL' :
         return styles.instagram;
         // return 'socicon-instagram';
+      case 'TumblrURL' :
+        return styles.tumblr;
       case 'YouTubeURL' :
         return 'socicon-youtube';
       case 'LinkedInURL' :

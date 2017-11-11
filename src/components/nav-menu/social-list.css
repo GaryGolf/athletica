@@ -8,8 +8,8 @@
 
 .footer-social_link {
   display: inline-block;
-  width: 24px;
-  height: 26px;
+  width: 26px;
+  height: 28px;
   overflow: hidden;
   color: #f5f5f5;
 }
@@ -24,12 +24,13 @@
   speak: none;
   display: inline-block;
   line-height: 1em;
-  width: 1em;
-  content: '';
+  width: 1.3em;
+  content: "";
 }
 
-.instagram, .facebook, .twitter, .tumblr, .pintrest  {
+.instagram, .facebook, .twitter, .tumblr, .pinterest  {
   composes: footer-social_link;
+  font-size: 1.3em;
 }
 .instagram:before {
   content: ""

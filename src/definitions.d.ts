@@ -68,6 +68,7 @@ declare interface ISocial {
   VimeoURL?: string;
   GooglePlusURL?: string;
   PinterestURL?: string;
+  TumblrURL?: string;
 }
 
 declare interface AppConfig {
