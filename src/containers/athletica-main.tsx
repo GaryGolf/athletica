@@ -31,7 +31,7 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
               title:'Rose Gold/Beige'
             },
             {
-              image:'/img/KNX_007_ProductPage_EvolutionBra_Indigo_1_1024x.jpg',
+              image:'/img/KNX_007_ProductPage_EvolutionBra_Black_1_1024x.jpg',
               badge:'/img/variant-color-black-beige.jpg',
               title:'Black/Beige'
             },
