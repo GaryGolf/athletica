@@ -1,5 +1,6 @@
 import * as React from 'react';
 const { connect } = require('react-redux');
+import * as styles from './social-list.css'
 
 interface State {}
 interface Props {
@@ -20,13 +21,17 @@ export default class SocialList extends React.Component <Props, State> {
   getSocialIcon = (name: string):string => {
     switch (name) {
       case 'FacebookURL' :
-        return 'socicon-facebook';
+        // return 'socicon-facebook';
+        return styles.facebook;
       case 'TwitterURL' :
-        return 'socicon-twitter';
+        return styles.twitter;
+        // return 'socicon-twitter';
       case 'PinterestURL' :
-        return 'socicon-pinterest';
+        return styles.pinterest;
+        // return 'socicon-pinterest';
       case 'InstagramURL' :
-        return 'socicon-instagram';
+        return styles.instagram;
+        // return 'socicon-instagram';
       case 'YouTubeURL' :
         return 'socicon-youtube';
       case 'LinkedInURL' :

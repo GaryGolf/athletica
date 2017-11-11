@@ -4,7 +4,9 @@ import UtilityBar from 'components/athletica-main/header';
 import FeatureList from 'components/athletica-main/feature-llist';
 import Blocks from 'components/athletica-main/blocks';
 import Content from 'components/athletica-main';
-
+import Cart from 'components/cart';
+import Search from 'components/search';
+import Footer from 'components/footer';
 interface Props {}
 interface State {}
 
@@ -18,6 +20,8 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
     return (
       <div className="main-container transition--fade transition--active">
         <NavMenu utilityBar={<UtilityBar/>} />
+        <Search/>
+        <Cart/>
         <Content.Product
           tabs={[
             {
@@ -54,6 +58,7 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
         />
         <Content.Blocks/>
         <Content.Features/>
+        <Footer/>
       </div>
     );
   }

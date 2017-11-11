@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "rb-icons";
+  src: url(/fonts/rb-icons.eot);
+  src: url(/fonts/rb-icons.eot#iefix) format("embedded-opentype"), url(/fonts/rb-icons.woff) format("woff"), url(/fonts/rb-icons.ttf) format("truetype"), url(/fonts/rb-icons.svg#rb-icons) format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+.footer-social_link {
+  display: inline-block;
+  width: 24px;
+  height: 26px;
+  overflow: hidden;
+  color: #f5f5f5;
+}
+.footer-social_link:hover {
+  color: #fff;
+}
+.footer-social_link:before {
+  font-family: 'rb-icons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: none;
+  display: inline-block;
+  line-height: 1em;
+  width: 1em;
+  content: '';
+}
+
+.instagram, .facebook, .twitter, .tumblr, .pintrest  {
+  composes: footer-social_link;
+}
+.instagram:before {
+  content: ""
+}
+.facebook:before {
+  content: ""
+}
+.twitter:before {
+  content: ""
+}
+.tumblr:before {
+  content: ""
+}
+.pinterest:before {
+  content: ""
+}

@@ -31,12 +31,15 @@ export default class ListedProduct extends React.PureComponent <Props, State> {
         <img src={tab.badge}/>
       </a>
     ));
-
+    
     console.log(this.props.tabs);
     return (
       <div className={styles.container}>
-      <img src={this.props.tabs[this.state.current].image}/>
-      {variants}
+      <a href="#" className={styles.twitter}/>
+      
+      <span className={styles['icon-pinterest']}/>
+      {/* <img src={this.props.tabs[this.state.current].image}/> */}
+      {/* {variants} */}
       </div>
     );
   }
