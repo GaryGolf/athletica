@@ -25,34 +25,40 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
         <Content.Product
           tabs={[
             {
+              id: '§1230',
               image:'/img/KNX_007_ProductPage_EvolutionBra_MidnightGarden_1_1024x.jpg',
               badge:'/img/variant-color-midnight-garden-black.jpg',
-              title:'Midnight Garden/Black'
+              title:'Midnight Garden/Black',
             },
             {
+              id: '§1231',
               image:'/img/KNX_007_ProductPage_EvolutionBra_RoseGold_1_1024x.jpg',
               badge:'/img/variant-color-rose-gold-beige.png',
-              title:'Rose Gold/Beige'
+              title:'Rose Gold/Beige',
             },
             {
+              id: '§1232',
               image:'/img/KNX_007_ProductPage_EvolutionBra_Black_1_1024x.jpg',
               badge:'/img/variant-color-black-beige.jpg',
-              title:'Black/Beige'
+              title:'Black/Beige',
             },
             {
+              id: '§1233',
               image:'/img/KNX_007_ProductPage_EvolutionBra_Beige_1_1024x.jpg',
               badge:'/img/variant-color-beige-grey-heather.jpg',
-              title:'Beage/Grey Heather'
+              title:'Beage/Grey Heather',
             },
             {
+              id: '§1234',
               image:'/img/KNX_007_ProductPage_EvolutionBra_Indigo_1_1024x.jpg',
               badge:'/img/variant-color-indigo-seaport.jpg',
-              title:'Indigo/Seaport'
+              title:'Indigo/Seaport',
             },
             {
+              id: '§1235',
               image: '/img/KNX_007_ProductPage_EvolutionBra_HeatherGrey_1_1024x.jpg',
               badge: '/img/variant-color-grey-heather-black.jpg',
-              title: 'Grey Heather/Black'
+              title: 'Grey Heather/Black',
             }
           ]}
         />

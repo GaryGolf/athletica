@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as styles from './listed-product.css';
 
 interface Tab {
+  id: string;
   image: string;
   badge: string;
   title: string;
@@ -20,26 +21,32 @@ export default class ListedProduct extends React.PureComponent <Props, State> {
       current: 0,
     };
   }
+
+  handleVariant = event => {
+    const element = event.currentTarget;
+    event.preventDefault();
+    const id = element.dataset.variantId;
+    const current = this.props.tabs.findIndex(tab => tab.id === id)
+    this.setState({ current })
+  }
+
   render() {
-    const variants = this.props.tabs.map((tab,idx) => (
-      <a key={idx}
+    const variants = this.props.tabs.map((tab, idx) => (
+      <a key={tab.id}
+        data-variant-id={tab.id}
         className={this.state.current === idx ? styles.active : styles.variant}
         href="#"
-        onClick={e => this.setState({ current:idx })}
+        onClick={this.handleVariant}
         title={tab.title}
       >
         <img src={tab.badge}/>
       </a>
     ));
     
-    console.log(this.props.tabs);
     return (
       <div className={styles.container}>
-      <a href="#" className={styles.twitter}/>
-      
-      <span className={styles['icon-pinterest']}/>
-      {/* <img src={this.props.tabs[this.state.current].image}/> */}
-      {/* {variants} */}
+        <img src={this.props.tabs[this.state.current].image}/>
+        {variants}
       </div>
     );
   }
