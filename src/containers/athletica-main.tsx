@@ -59,7 +59,7 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
               image: '/img/KNX_007_ProductPage_EvolutionBra_HeatherGrey_1_1024x.jpg',
               badge: '/img/variant-color-grey-heather-black.jpg',
               title: 'Grey Heather/Black',
-            }
+            },
           ]}
         />
         <Content.Blocks/>

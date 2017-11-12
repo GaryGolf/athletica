@@ -1,6 +1,6 @@
 import * as React from 'react';
 const { connect } = require('react-redux');
-import * as styles from './social-list.css'
+import * as styles from './social-list.css';
 
 interface State {}
 interface Props {

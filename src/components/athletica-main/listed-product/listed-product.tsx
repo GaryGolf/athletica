@@ -8,7 +8,7 @@ interface Tab {
   title: string;
 }
 interface Props {
-  tabs: Array<Tab>
+  tabs: Array<Tab>;
 }
 interface State {
   current: number;
@@ -22,12 +22,12 @@ export default class ListedProduct extends React.PureComponent <Props, State> {
     };
   }
 
-  handleVariant = event => {
+  handleVariant = (event) => {
     const element = event.currentTarget;
     event.preventDefault();
     const id = element.dataset.variantId;
-    const current = this.props.tabs.findIndex(tab => tab.id === id)
-    this.setState({ current })
+    const current = this.props.tabs.findIndex(tab => tab.id === id);
+    this.setState({ current });
   }
 
   render() {
