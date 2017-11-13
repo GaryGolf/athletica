@@ -47,3 +47,7 @@
 .pinterest:before {
   content: ""
 }
+
+.button {
+  outline: none;
+}

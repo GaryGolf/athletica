@@ -1,6 +1,7 @@
 import * as React from 'react';
 const { connect } = require('react-redux');
 import * as styles from './social-list.css';
+import { ShareButtons } from 'react-share';
 
 interface State {}
 interface Props {
@@ -18,34 +19,42 @@ export default class SocialList extends React.Component <Props, State> {
     super(props);
   }
 
-  getSocialIcon = (name: string):string => {
+  getSocialIcon = (name: string):JSX.Element => {
+    const { FacebookShareButton } = ShareButtons;
     switch (name) {
       case 'FacebookURL' :
         // return 'socicon-facebook';
-        return styles.facebook;
+        return (
+          <FacebookShareButton
+            className={styles.button}
+            quote={'Some text'}
+            url={'http://maxim.com'}>
+            <span className={styles.facebook}/>
+          </FacebookShareButton>
+        );
       case 'TwitterURL' :
-        return styles.twitter;
+        return <span className={styles.twitter}/>;
         // return 'socicon-twitter';
       case 'PinterestURL' :
-        return styles.pinterest;
+        return <span className={styles.pinterest}/>;
         // return 'socicon-pinterest';
       case 'InstagramURL' :
-        return styles.instagram;
+        return <span className={styles.instagram}/>;
         // return 'socicon-instagram';
       case 'TumblrURL' :
-        return styles.tumblr;
+        return <span className={styles.tumblr}/>;
       case 'YouTubeURL' :
-        return 'socicon-youtube';
+        return <span className={'socicon-youtube'}/>;
       case 'LinkedInURL' :
-        return 'socicon-linkedin';
+        return <span className={'socicon-linkedin'}/>;
       case 'FlickrURL' :
-        return 'socicon-flickr';
+        return <span className={'socicon-flickr'}/>;
       case 'TripAdvisorURL' :
-        return 'socicon-tripadvisor';
+        return <span className={'socicon-tripadvisor'}/>;
       case 'VimeoURL' :
-        return 'socicon-vimeo';
+        return <span className={'socicon-vimeo'}/>;
       case 'GooglePlusURL' :
-        return 'socicon-googleplus';
+        return <span className={'socicon-googleplus'}/>;
       default :
         return null;
     }
@@ -56,14 +65,14 @@ export default class SocialList extends React.Component <Props, State> {
     if (!social) return null;
     
     const icons = Object.keys(social)
-      .map((item:string) => {
+      .map((item:string, idx) => {
         const icon = this.getSocialIcon(item);
         if (!icon) return null;
 
         return (
-          <li key={icon}>
+          <li key={idx}>
             <a href={social[item]}>
-              <i className={icon}/>
+              {icon}
             </a>
           </li>
         );
