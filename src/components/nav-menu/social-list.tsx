@@ -26,9 +26,9 @@ export default class SocialList extends React.Component <Props, State> {
   constructor(props:Props) {
     super(props);
     this.state = {
-      title: '',
-      description: '',
-      media: '',
+      title: 'Athletica - Balance',
+      description: 'Athletica - Balance',
+      media: 'https://cdn.shopify.com/s/files/1/0660/0355/t/8/assets/fb_logo.png',
       url: window.location.href,
     };
   }
