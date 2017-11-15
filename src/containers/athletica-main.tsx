@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import NavMenu from 'components/nav-menu';
 import UtilityBar from 'components/athletica-main/header';
 import FeatureList from 'components/athletica-main/feature-llist';
@@ -7,6 +8,7 @@ import Content from 'components/athletica-main';
 import Cart from 'components/cart';
 import Search from 'components/search';
 import Footer from 'components/footer';
+
 interface Props {}
 interface State {}
 
@@ -17,6 +19,9 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
 
   render() {
 
+    const title = 'The Most Comfortable Wireless & Seamless Bras & Underwear Athletica - Balance';
+    const description = 'The most comfortable bras &amp; underwear that you can wear all day.' +
+      'Find your bra and underwear size with wireless or padded bras and athletic underwear';
     return (
       <div className="main-container transition--fade transition--active">
         <NavMenu utilityBar={<UtilityBar/>} />
@@ -65,6 +70,21 @@ export default class AthleticaMain extends React.PureComponent <Props, State> {
         <Content.Blocks/>
         <Content.Features/>
         <Footer/>
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description}/>
+          <meta property="og:type" content="website"/>
+          <meta property="og:title" content={title}/>
+          <meta property="og:description" content={description}/>
+          <meta property="og:image" 
+            content="https://cdn.shopify.com/s/files/1/0660/0355/t/8/assets/fb_logo.png"/> 
+          <meta property="og:url" content="https://www.knixwear.com/"/>
+          <meta property="og:site_name" content="Knixwear"/>
+          <meta name="twitter:card" content="summary"/>
+          <meta name="twitter:title" content={title}/>
+          <meta name="twitter:description" content={description}/>
+          <link rel="canonical" href="https://www.knixwear.com/"/>
+        </Helmet>
       </div>
     );
   }

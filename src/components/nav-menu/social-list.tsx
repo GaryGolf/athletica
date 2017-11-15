@@ -2,8 +2,14 @@ import * as React from 'react';
 const { connect } = require('react-redux');
 import * as styles from './social-list.css';
 import { ShareButtons } from 'react-share';
+import { Helmet } from 'react-helmet';
 
-interface State {}
+interface State {
+  title: string;
+  description: string;
+  media: string;
+  url: string;
+}
 interface Props {
   social?: ISocial;
 }
@@ -15,34 +21,70 @@ interface Props {
 )
 export default class SocialList extends React.Component <Props, State> {
 
+  private url: any;
+  private description: string;
   constructor(props:Props) {
     super(props);
+    this.state = {
+      title: '',
+      description: '',
+      media: '',
+      url: window.location.href,
+    };
+  }
+  
+  componentDidMount() {
+    const title = this.getMetaData('og:title') || this.state.title;
+    const description = this.getMetaData('og:description') || this.state.description;
+    const media = this.getMetaData('og:image') || this.state.media;
+    const url = this.getMetaData('og:url') || this.state.url;
+    this.setState({ title, description, media, url }); 
+  }
+
+  getMetaData(property: string):string {
+    const data = Helmet.peek();
+    if (!data) return null;
+    const meta = data['metaTags'].find(item => item.property === property);
+    if (!!meta && !!meta.content) return meta.content;
+    return null;
   }
 
   getSocialIcon = (name: string):JSX.Element => {
-    const { FacebookShareButton } = ShareButtons;
+    const { FacebookShareButton, TwitterShareButton, PinterestShareButton,
+      TumblrShareButton } = ShareButtons;
+    const { title, description, media, url } = this.state;
     switch (name) {
+
       case 'FacebookURL' :
-        // return 'socicon-facebook';
         return (
-          <FacebookShareButton
-            className={styles.button}
-            quote={'Some text'}
-            url={'http://maxim.com'}>
+          <FacebookShareButton className={styles.button} quote={description} url={url}>
             <span className={styles.facebook}/>
           </FacebookShareButton>
         );
+
       case 'TwitterURL' :
-        return <span className={styles.twitter}/>;
-        // return 'socicon-twitter';
+        return (
+          <TwitterShareButton className={styles.button} title={title} url={url}>
+            <span className={styles.twitter}/>
+          </TwitterShareButton>
+        );
+
       case 'PinterestURL' :
-        return <span className={styles.pinterest}/>;
-        // return 'socicon-pinterest';
+        return (
+          <PinterestShareButton className={styles.button} media={media} description={description} url={url}>
+            <span className={styles.pinterest}/>
+           </PinterestShareButton>  
+        );
+        
+      case 'TumblrURL' :
+        return (
+          <TumblrShareButton className={styles.button} title={title} caption={description} url={url}>
+            <span className={styles.tumblr}/>
+          </TumblrShareButton>
+        );
+
       case 'InstagramURL' :
         return <span className={styles.instagram}/>;
-        // return 'socicon-instagram';
-      case 'TumblrURL' :
-        return <span className={styles.tumblr}/>;
       case 'YouTubeURL' :
         return <span className={'socicon-youtube'}/>;
       case 'LinkedInURL' :

@@ -8,10 +8,11 @@
 
 .footer-social_link {
   display: inline-block;
-  width: 26px;
-  height: 28px;
-  overflow: hidden;
+  width: 20px;
+  height: 26px;
+  /* overflow: hidden; */
   color: #f5f5f5;
+  
 }
 .footer-social_link:hover {
   color: #fff;
@@ -24,28 +25,28 @@
   speak: none;
   display: inline-block;
   line-height: 1em;
-  width: 1.3em;
+  width: 1em;
   content: "";
 }
 
 .instagram, .facebook, .twitter, .tumblr, .pinterest  {
   composes: footer-social_link;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 .instagram:before {
-  content: ""
+  content: "";
 }
 .facebook:before {
-  content: ""
+  content: "";
 }
 .twitter:before {
-  content: ""
+  content: "";
 }
 .tumblr:before {
-  content: ""
+  content: "";
 }
 .pinterest:before {
-  content: ""
+  content: "";
 }
 
 .button {
